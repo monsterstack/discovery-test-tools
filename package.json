@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-      "core-server": "https://github.com/monsterstack/core-server#development"
+    "core-server": "https://github.com/monsterstack/core-server#development",
+    "promise": "^7.1.1"
   }
 }
