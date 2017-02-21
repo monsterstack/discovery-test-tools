@@ -1,6 +1,7 @@
 'use strict';
 const Server = require('core-server').Server;
 const Promise = require('promise');
+const uuid = require('node-uuid');
 
 
 const startTestService = (name, callback) => {
