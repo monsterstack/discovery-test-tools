@@ -4,9 +4,9 @@ const Promise = require('promise');
 const uuid = require('node-uuid');
 
 
-const startTestService = (name, callback) => {
+const startTestService = (name, options, callback) => {
     let server = null;
-    server = new Server(name, null, {types:[]}, {});
+    server = new Server(name, null, {types:[]}, options);
 
     server.init().then(() => {
         server.loadHttpRoutes();
