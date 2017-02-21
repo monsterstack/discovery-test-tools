@@ -2,7 +2,7 @@
 const Server = require('core-server').Server;
 const Promise = require('promise');
 const uuid = require('node-uuid');
-
+const Proxy = require('discovery-proxy').Proxy;
 
 const startTestService = (name, options, callback) => {
     let server = null;
