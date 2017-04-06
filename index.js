@@ -11,15 +11,12 @@ const startTestService = (name, options, callback) => {
     server.init().then(() => {
         server.loadHttpRoutes();
         server.listen().then(() => {
-            console.log('Up and running..');
             server.query();
             callback(null, server);
         }).catch((err) => {
-            console.log(err);
             callback(err, null);
         });
     }).catch((err) => {
-        console.log(err);
         callback(err, null);
     });
 }
@@ -33,7 +30,6 @@ const sideLoadServiceDescriptor = (service, descriptor) => {
             service.boundProxy.sideLoadService(descriptor).then(() => {
                 return service.boundProxy.table();
             }).then((cache) => {
-                console.log(cache);
                 resolve(); 
             }).catch((err) => {
                 reject(err);
@@ -44,7 +40,6 @@ const sideLoadServiceDescriptor = (service, descriptor) => {
             service.boundProxy.sideLoadService(descriptor).then(() => {
                 return service.boundProxy.table();
             }).then((cache) => {
-                console.log(cache);
                 resolve(); 
             }).catch((err) => {
                 reject(err);
